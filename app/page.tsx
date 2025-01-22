@@ -14,6 +14,7 @@ export default function Home() {
         const WebApp = (await import('@twa-dev/sdk')).default;
         WebApp.ready();
         setInitData(WebApp.initData);
+        console.log("WebApp.initDataUnsafe---------------", WebApp.initDataUnsafe)
         setUserId(WebApp.initDataUnsafe.user?.id.toString() || '');
         setStartParam(WebApp.initDataUnsafe.start_param || '');
         console.log(WebApp.initDataUnsafe.start_param)
