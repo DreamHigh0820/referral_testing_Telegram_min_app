@@ -48,6 +48,7 @@ const ReferralSystem: React.FC<ReferralSystemProps> = ({ initData, userId, start
   }, [userId, startParam])
 
   const handleInviteFriend = () => {
+    console.log('first----------', initData, userId, startParam)
     const utils = initUtils()
     const inviteLink = `${INVITE_URL}?startapp=${userId}`
     const shareText = `Join me on this awesome Telegram mini app!`
